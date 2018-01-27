@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let signUpButton : UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
-        button.backgroundColor = UIColor(red: 149/255, green: 204/255, blue: 244/255, alpha: 1)
+        button.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         textField.placeholder = "Email"
         textField.backgroundColor = UIColor(white: 0, alpha: 0.05)
         textField.borderStyle = .roundedRect
+        textField.addLeftImageView(withImage: #imageLiteral(resourceName: "emailIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         textField.placeholder = "Username"
         textField.backgroundColor = UIColor(white: 0, alpha: 0.05)
         textField.borderStyle = .roundedRect
+        textField.addLeftImageView(withImage: #imageLiteral(resourceName: "usernameIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
         textField.isSecureTextEntry = true
         textField.backgroundColor = UIColor(white: 0, alpha: 0.05)
         textField.borderStyle = .roundedRect
+        textField.addLeftImageView(withImage: #imageLiteral(resourceName: "passwordIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -68,12 +71,11 @@ class ViewController: UIViewController {
         plusPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         
         setupInputFields()
-        
     }
     
     fileprivate func setupInputFields() {
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
+        let stackView = UIStackView(arrangedSubviews: [usernameTextField, emailTextField, passwordTextField, signUpButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
@@ -82,11 +84,12 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: plusPhotoButton.bottomAnchor, constant: 20),
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
             stackView.heightAnchor.constraint(equalToConstant: 200)
         ])
+        
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, paddingTop: 20)
         
     }
     
