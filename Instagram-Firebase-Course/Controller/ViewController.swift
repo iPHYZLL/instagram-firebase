@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     let plusPhotoButton : UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
         textField.borderStyle = .roundedRect
         textField.addLeftImageView(withImage: #imageLiteral(resourceName: "emailIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -45,7 +43,6 @@ class ViewController: UIViewController {
         textField.borderStyle = .roundedRect
         textField.addLeftImageView(withImage: #imageLiteral(resourceName: "usernameIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -57,7 +54,6 @@ class ViewController: UIViewController {
         textField.borderStyle = .roundedRect
         textField.addLeftImageView(withImage: #imageLiteral(resourceName: "passwordIcon"), andTintColor: UIColor.lightGray)
         textField.font = UIFont.systemFont(ofSize: 14)
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -65,10 +61,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(plusPhotoButton)
-        plusPhotoButton.heightAnchor.constraint(equalToConstant: 140).isActive = true
-        plusPhotoButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        
+        plusPhotoButton.anchor(top: view.topAnchor, paddingTop: 40, right: nil, paddingRight: 0, left: nil, paddingLeft: 0, bottom: nil, paddingBottom: 0, width: 140, height: 140)
+        
         plusPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        plusPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
         
         setupInputFields()
     }
@@ -76,20 +72,13 @@ class ViewController: UIViewController {
     fileprivate func setupInputFields() {
         
         let stackView = UIStackView(arrangedSubviews: [usernameTextField, emailTextField, passwordTextField, signUpButton])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
         stackView.spacing = 10
         
         view.addSubview(stackView)
         
-        NSLayoutConstraint.activate([
-            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
-            stackView.heightAnchor.constraint(equalToConstant: 200)
-        ])
-        
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, paddingTop: 20)
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, paddingTop: 20, right: view.rightAnchor, paddingRight: 40, left: view.leftAnchor, paddingLeft: 40, bottom: nil, paddingBottom: 0, width: nil, height: 200)
         
     }
     
