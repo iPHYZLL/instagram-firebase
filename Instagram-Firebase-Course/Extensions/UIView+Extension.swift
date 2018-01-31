@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func anchor(top : NSLayoutYAxisAnchor?, paddingTop : CGFloat, right : NSLayoutXAxisAnchor?, paddingRight : CGFloat, left : NSLayoutXAxisAnchor?, paddingLeft : CGFloat, bottom :  NSLayoutYAxisAnchor?, paddingBottom : CGFloat, width : CGFloat?, height : CGFloat?) {
+    func anchor(top : NSLayoutYAxisAnchor?, paddingTop : CGFloat, right : NSLayoutXAxisAnchor?, paddingRight : CGFloat, left : NSLayoutXAxisAnchor?, paddingLeft : CGFloat, bottom :  NSLayoutYAxisAnchor?, paddingBottom : CGFloat, width : CGFloat, height : CGFloat) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -30,11 +30,11 @@ extension UIView {
             rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
         
-        if let height = height {
+        if height != 0 {
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
         
-        if let width = width {
+        if width != 0 {
             widthAnchor.constraint(equalToConstant: width).isActive = true
         }
         
