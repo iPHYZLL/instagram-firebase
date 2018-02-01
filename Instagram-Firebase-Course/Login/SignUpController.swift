@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let plusPhotoButton : UIButton = {
         let button = UIButton(type: .system)
@@ -75,6 +75,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = UIColor.white
         
         view.addSubview(plusPhotoButton)
         
@@ -162,7 +165,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 }
 
-extension ViewController {
+extension SignUpController {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
