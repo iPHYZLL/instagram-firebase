@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginController: UIViewController {
     
@@ -31,7 +33,7 @@ class LoginController: UIViewController {
         textField.backgroundColor = UIColor(white: 0, alpha: 0.05)
         textField.borderStyle = .roundedRect
         textField.addLeftImageView(withImage: #imageLiteral(resourceName: "emailIcon"), andTintColor: UIColor.lightGray)
-        //textField.addTarget(self, action: #selector(handleTextInputChange), for: UIControlEvents.editingChanged)
+        textField.addTarget(self, action: #selector(handleTextInputChange), for: UIControlEvents.editingChanged)
         textField.font = UIFont.systemFont(ofSize: 14)
         return textField
     }()
@@ -43,7 +45,7 @@ class LoginController: UIViewController {
         textField.backgroundColor = UIColor(white: 0, alpha: 0.05)
         textField.borderStyle = .roundedRect
         textField.addLeftImageView(withImage: #imageLiteral(resourceName: "passwordIcon"), andTintColor: UIColor.lightGray)
-        //textField.addTarget(self, action: #selector(handleTextInputChange), for: UIControlEvents.editingChanged)
+        textField.addTarget(self, action: #selector(handleTextInputChange), for: UIControlEvents.editingChanged)
         textField.font = UIFont.systemFont(ofSize: 14)
         return textField
     }()
@@ -55,10 +57,30 @@ class LoginController: UIViewController {
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
-//        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         button.isEnabled = false
         return button
     }()
+    
+    @objc func handleLogin() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
+            
+            if let err = err {
+                print("Failed to sign in with emaik:", err)
+                return
+            }
+            
+            guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+            mainTabBarController.setupViewControllers()
+            
+            print("Successfully loged back in with user:", user?.uid ?? "")
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+    }
     
     let dontHaveAccountButton : UIButton = {
         let button = UIButton(type: .system)
@@ -70,6 +92,20 @@ class LoginController: UIViewController {
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
+    
+    @objc func handleTextInputChange() {
+        
+        let isFormValid = emailTextField.text?.count ?? 0 > 0 && passwordTextField.text?.count ?? 0 > 0
+        
+        if isFormValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = UIColor.rgb(red: 17, green: 154, blue: 237)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
+        }
+        
+    }
     
     @objc func handleShowSignUp() {
         let signUpController = SignUpController()

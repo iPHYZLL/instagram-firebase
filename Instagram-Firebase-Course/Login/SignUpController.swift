@@ -176,6 +176,12 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                     }
                     
                     print("Successfuly saved user into to db")
+                    
+                    guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+                    mainTabBarController.setupViewControllers()
+                    
+                    print("Successfully loged back in with user:", user?.uid ?? "")
+                    self.dismiss(animated: true, completion: nil)
                 })
 
             })
