@@ -17,7 +17,6 @@ class MainTabBarController: UITabBarController {
         
         if Auth.auth().currentUser == nil {
             // present if not logged in
-            
             DispatchQueue.main.async {
                 let loginController = LoginController()
                 let navigationController = UINavigationController(rootViewController: loginController)
