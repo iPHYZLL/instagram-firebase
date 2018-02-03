@@ -24,6 +24,7 @@
 		BCF96AAF20220A7300E18434 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AAE20220A7300E18434 /* UserProfileHeader.swift */; };
 		BCF96AB22022159C00E18434 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AB12022159C00E18434 /* User.swift */; };
 		BCF96AB620236F5500E18434 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AB520236F5500E18434 /* LoginController.swift */; };
+		BCFA25C820264D570092BD20 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA25C720264D570092BD20 /* PhotoSelectorHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		BCF96AAE20220A7300E18434 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		BCF96AB12022159C00E18434 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCF96AB520236F5500E18434 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		BCFA25C720264D570092BD20 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
 		F8296789AD492D8FB4BB6FD0 /* Pods-Instagram-Firebase-Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-Firebase-Course.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram-Firebase-Course/Pods-Instagram-Firebase-Course.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 			children = (
 				BCBF473A2024E27300BEF010 /* PhotoSelectorController.swift */,
 				BCBF473C2024F76700BEF010 /* PhotoSelectorCell.swift */,
+				BCFA25C720264D570092BD20 /* PhotoSelectorHeader.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				BCF96AB22022159C00E18434 /* User.swift in Sources */,
 				BCF96AAD2021EB4D00E18434 /* UserProfileController.swift in Sources */,
 				BCB28515201CB96A00A10473 /* UIView+Extension.swift in Sources */,
+				BCFA25C820264D570092BD20 /* PhotoSelectorHeader.swift in Sources */,
 				BCBF473B2024E27300BEF010 /* PhotoSelectorController.swift in Sources */,
 				BCB28513201CB1C600A10473 /* UIColor+Extension.swift in Sources */,
 				BCF96AB620236F5500E18434 /* LoginController.swift in Sources */,
