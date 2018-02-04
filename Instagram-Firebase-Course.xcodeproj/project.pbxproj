@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F49413BE95517AD448645A7 /* Pods_Instagram_Firebase_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC15C8171C21E553DB5A400B /* Pods_Instagram_Firebase_Course.framework */; };
 		BC0B5D8F201D3E0A005377AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC0B5D8E201D3E09005377AB /* GoogleService-Info.plist */; };
+		BC5D9547202731250009EBA7 /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D9546202731250009EBA7 /* SharePhotoController.swift */; };
 		BCB2850A201BE35B00A10473 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB28509201BE35B00A10473 /* UITextField+Extension.swift */; };
 		BCB28513201CB1C600A10473 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB28512201CB1C600A10473 /* UIColor+Extension.swift */; };
 		BCB28515201CB96A00A10473 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB28514201CB96A00A10473 /* UIView+Extension.swift */; };
@@ -31,6 +32,7 @@
 		06FBA28592087AAD18CEE7A6 /* Pods-Instagram-Firebase-Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-Firebase-Course.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram-Firebase-Course/Pods-Instagram-Firebase-Course.release.xcconfig"; sourceTree = "<group>"; };
 		BC0B5D8E201D3E09005377AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC15C8171C21E553DB5A400B /* Pods_Instagram_Firebase_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Firebase_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5D9546202731250009EBA7 /* SharePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
 		BCB28509201BE35B00A10473 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BCB28512201CB1C600A10473 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BCB28514201CB96A00A10473 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				BCBF473A2024E27300BEF010 /* PhotoSelectorController.swift */,
 				BCBF473C2024F76700BEF010 /* PhotoSelectorCell.swift */,
 				BCFA25C720264D570092BD20 /* PhotoSelectorHeader.swift */,
+				BC5D9546202731250009EBA7 /* SharePhotoController.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				BCBF473D2024F76700BEF010 /* PhotoSelectorCell.swift in Sources */,
 				BCDE0C3F201BB92D00932EEC /* SignUpController.swift in Sources */,
 				BCF96AAB2021EA2B00E18434 /* MainTabBarController.swift in Sources */,
+				BC5D9547202731250009EBA7 /* SharePhotoController.swift in Sources */,
 				BCF96AAF20220A7300E18434 /* UserProfileHeader.swift in Sources */,
 				BCDE0C3D201BB92D00932EEC /* AppDelegate.swift in Sources */,
 				BCF96AB22022159C00E18434 /* User.swift in Sources */,
