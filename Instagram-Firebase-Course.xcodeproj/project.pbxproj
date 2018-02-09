@@ -14,6 +14,7 @@
 		BC85A07C202C6FB4001B1558 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85A07B202C6FB4001B1558 /* CustomImageView.swift */; };
 		BC85A07F202C9524001B1558 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85A07E202C9524001B1558 /* HomeController.swift */; };
 		BC85A081202C9803001B1558 /* HomePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85A080202C9803001B1558 /* HomePostCell.swift */; };
+		BC9F6B1A202DE3C2008BF04E /* Database+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F6B19202DE3C2008BF04E /* Database+Extension.swift */; };
 		BC9FA8E720276086005C8782 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9FA8E620276086005C8782 /* Post.swift */; };
 		BCB2850A201BE35B00A10473 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB28509201BE35B00A10473 /* UITextField+Extension.swift */; };
 		BCB28513201CB1C600A10473 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB28512201CB1C600A10473 /* UIColor+Extension.swift */; };
@@ -42,6 +43,7 @@
 		BC85A07B202C6FB4001B1558 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		BC85A07E202C9524001B1558 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BC85A080202C9803001B1558 /* HomePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostCell.swift; sourceTree = "<group>"; };
+		BC9F6B19202DE3C2008BF04E /* Database+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database+Extension.swift"; sourceTree = "<group>"; };
 		BC9FA8E620276086005C8782 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BCB28509201BE35B00A10473 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BCB28512201CB1C600A10473 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				BCB28509201BE35B00A10473 /* UITextField+Extension.swift */,
 				BCB28512201CB1C600A10473 /* UIColor+Extension.swift */,
 				BCB28514201CB96A00A10473 /* UIView+Extension.swift */,
+				BC9F6B19202DE3C2008BF04E /* Database+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				BC9FA8E720276086005C8782 /* Post.swift in Sources */,
 				BCB28515201CB96A00A10473 /* UIView+Extension.swift in Sources */,
 				BCFA25C820264D570092BD20 /* PhotoSelectorHeader.swift in Sources */,
+				BC9F6B1A202DE3C2008BF04E /* Database+Extension.swift in Sources */,
 				BC85A079202BA3F0001B1558 /* UserProfilePhotoCell.swift in Sources */,
 				BCBF473B2024E27300BEF010 /* PhotoSelectorController.swift in Sources */,
 				BC85A07F202C9524001B1558 /* HomeController.swift in Sources */,

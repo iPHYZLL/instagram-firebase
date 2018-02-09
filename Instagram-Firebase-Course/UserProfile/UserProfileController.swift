@@ -44,42 +44,16 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
             
             guard let dictionary = snapshot.value as? [String : Any] else { return }
             
-            let post = Post(dictionary: dictionary)
+            guard let user = self.user else { return }
             
-            self.posts.append(post)
+            let post = Post(user: user, dictionary: dictionary)
+            self.posts.insert(post, at: 0)
             
             self.collectionView?.reloadData()
             
         }) { (err) in
             print("Failed to fetch ordered posts:", err)
         }
-    }
-    
-    fileprivate func fetchPosts() {
-        
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        let ref = Database.database().reference().child("posts").child(uid)
-        
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            guard let dictionaries = snapshot.value as? [String : Any] else { return }
-            
-            dictionaries.forEach({ (key, value) in
-//                print("Key: \(key), Value: \(value)")
-                
-                guard let dictionary = value as? [String : Any] else { return }
-                
-                let post = Post(dictionary: dictionary)
-                self.posts.append(post)
-            })
-            
-            self.collectionView?.reloadData()
-            
-        }) { (err) in
-            print("Failed to fetch posts:", err)
-        }
-        
     }
     
     fileprivate func setupLogOutButton() {
@@ -160,21 +134,10 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value ?? "")
-            
-            guard let dictionary = snapshot.value as? [String : Any] else { return }
-            
-            self.user = User(dictionary: dictionary)
-            
-            self.navigationItem.title = self.user!.username
-            
-            // calls methods: SIZEFORTHEHEADER, HITS THE HEADER IN VIEWFORSUPPLEMENTARYELEMENTOFKIND METHOD
-            
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.user = user
+            self.navigationItem.title = self.user?.username
             self.collectionView?.reloadData()
-            
-        }) { (err) in
-            print("Failed to fetch user:" ,err)
         }
         
     }
