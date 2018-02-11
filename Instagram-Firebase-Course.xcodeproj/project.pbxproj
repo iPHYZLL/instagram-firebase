@@ -28,6 +28,7 @@
 		BCDE0C42201BB92D00932EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDE0C40201BB92D00932EEC /* Main.storyboard */; };
 		BCDE0C44201BB92D00932EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE0C43201BB92D00932EEC /* Assets.xcassets */; };
 		BCDE0C47201BB92D00932EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDE0C45201BB92D00932EEC /* LaunchScreen.storyboard */; };
+		BCDE7E432030B10B00D705C1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE7E422030B10B00D705C1 /* Date+Extension.swift */; };
 		BCF96AAB2021EA2B00E18434 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AAA2021EA2B00E18434 /* MainTabBarController.swift */; };
 		BCF96AAD2021EB4D00E18434 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AAC2021EB4D00E18434 /* UserProfileController.swift */; };
 		BCF96AAF20220A7300E18434 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF96AAE20220A7300E18434 /* UserProfileHeader.swift */; };
@@ -61,6 +62,7 @@
 		BCDE0C43201BB92D00932EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCDE0C46201BB92D00932EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCDE0C48201BB92D00932EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCDE7E422030B10B00D705C1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BCF96AAA2021EA2B00E18434 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BCF96AAC2021EB4D00E18434 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		BCF96AAE20220A7300E18434 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				BCB28512201CB1C600A10473 /* UIColor+Extension.swift */,
 				BCB28514201CB96A00A10473 /* UIView+Extension.swift */,
 				BC9F6B19202DE3C2008BF04E /* Database+Extension.swift */,
+				BCDE7E422030B10B00D705C1 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				BCF96AAB2021EA2B00E18434 /* MainTabBarController.swift in Sources */,
 				BC5D9547202731250009EBA7 /* SharePhotoController.swift in Sources */,
 				BCF96AAF20220A7300E18434 /* UserProfileHeader.swift in Sources */,
+				BCDE7E432030B10B00D705C1 /* Date+Extension.swift in Sources */,
 				BCDE0C3D201BB92D00932EEC /* AppDelegate.swift in Sources */,
 				BC9F6B1D202DF97C008BF04E /* UserSearchController.swift in Sources */,
 				BC9F6B1F202E0DE8008BF04E /* UserSearchCell.swift in Sources */,
